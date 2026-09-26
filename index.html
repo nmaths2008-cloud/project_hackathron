@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SentinelGuard // SOC</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <!-- Header Navigation -->
+    <header class="top">
+      <div class="brand">
+        <div class="logo">S</div>
+        <div>
+          <h1>SentinelGuard</h1>
+          <span>Autonomous Security Decision Center</span>
+        </div>
+      </div>
+      <div class="controls">
+        <span class="live">● LIVE MONITORING</span>
+        <button class="secondary" id="reset">Reset</button>
+        <button id="simulate">▶ Run incident replay</button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Banner -->
+      <section class="hero">
+        <div>
+          <div class="eyebrow">DEFENSIVE SECURITY INTELLIGENCE</div>
+          <h2>Detect. Decide. Explain. Respond.</h2>
+          <p>Explainable, reversible security automation for realistic incident conditions.</p>
+        </div>
+        <div class="hero-pill">
+          <span>POLICY</span>
+          <b>SAFE-BY-DEFAULT</b>
+        </div>
+      </section>
+
+      <!-- Statistics Bar -->
+      <section class="stats">
+        <div>
+          <span>Total events</span>
+          <b id="events">0</b>
+          <small>streamed signals</small>
+        </div>
+        <div>
+          <span>Incidents</span>
+          <b id="incidents">0</b>
+          <small>correlated alerts</small>
+        </div>
+        <div>
+          <span>High risk</span>
+          <b id="critical">0</b>
+          <small>risk ≥ 75</small>
+        </div>
+        <div>
+          <span>Contained</span>
+          <b id="contained">0</b>
+          <small>reversible actions</small>
+        </div>
+      </section>
+
+      <!-- Upper Workspace (Timeline & Radar) -->
+      <section class="workspace">
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="kicker">INCIDENT STREAM</span>
+              <h3>Live security timeline</h3>
+            </div>
+            <span class="healthy">● SYSTEM HEALTHY</span>
+          </div>
+          <div id="timeline"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="kicker">THREAT SURFACE</span>
+              <h3>Source activity</h3>
+            </div>
+          </div>
+          <div class="radar">
+            <i></i><i></i><i></i>
+            <b>SG</b>
+            <em class="p1"></em>
+            <em class="p2"></em>
+            <em class="p3"></em>
+          </div>
+          <div id="sources" class="sources"></div>
+        </div>
+      </section>
+
+      <!-- Lower Workspace (Reasoning & Log) -->
+      <section class="workspace lower">
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="kicker">DECISION ENGINE</span>
+              <h3>Risk & reasoning</h3>
+            </div>
+          </div>
+          <div id="reasoning"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="kicker">RESPONSE LOG</span>
+              <h3>Safe actions</h3>
+            </div>
+          </div>
+          <div id="responses"></div>
+        </div>
+      </section>
+
+      <!-- Architecture Flow Section -->
+      <section class="panel architecture">
+        <span class="kicker">CONTROL PLANE</span>
+        <h3>How SentinelGuard reaches a decision</h3>
+        <div class="flow">
+          <div>
+            <b>01 DETECT</b>
+            <small>Correlate weak signals.</small>
+          </div>
+          <strong>→</strong>
+          <div>
+            <b>02 DECIDE</b>
+            <small>Severity × confidence.</small>
+          </div>
+          <strong>→</strong>
+          <div>
+            <b>03 EXPLAIN</b>
+            <small>Show evidence.</small>
+          </div>
+          <strong>→</strong>
+          <div>
+            <b>04 RESPOND</b>
+            <small>Reversible action.</small>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
